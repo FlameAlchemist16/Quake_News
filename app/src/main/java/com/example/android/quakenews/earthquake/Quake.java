@@ -1,21 +1,19 @@
 package com.example.android.quakenews.earthquake;
 
-public class quake {
-    private double mMagnitude;
-    private long mDate;
-    private String mPlace;
+public class Quake {
+    private String mMagnitude, mDate, mPlace;
 
-    public quake(double magnitude, long date, String place)
+    public Quake(String magnitude, String place, String date)
     {
         mMagnitude = magnitude;
         mDate = date;
         mPlace = place;
     }
-    public double getMag()
+    public String getMag()
     {
         return mMagnitude;
     }
-    public long getDate()
+    public String getDate()
     {
         return mDate;
     }
