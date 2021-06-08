@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="80dp">
 
     <TextView
         android:id="@+id/mag"
         android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:textColor="@color/black"
         tools:text="@string/sample_mag"/>
 
     <View
         android:layout_width="0.1dp"
-        android:layout_height="48dp"
+        android:layout_height="72dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@id/mag"
         android:layout_toRightOf="@id/mag"
@@ -38,22 +38,23 @@
     <TextView
         android:id="@+id/place"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/quake_at"
         android:layout_toStartOf="@id/day"
         android:layout_toLeftOf="@id/day"
         android:layout_toEndOf="@id/mag"
         android:layout_toRightOf="@id/mag"
         android:gravity="center_vertical"
+        android:maxWidth="259dp"
+        android:textSize="16sp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        tools:text="@string/sample_place" />
+        tools:text="Delaingiengeingeingeingiengeanignaengiaeng" />
 
     <View
         android:layout_width="0.1dp"
-        android:layout_height="48dp"
+        android:layout_height="72dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@id/place"
         android:layout_toRightOf="@id/place"
@@ -62,7 +63,7 @@
     <TextView
         android:id="@+id/day"
         android:layout_width="96dp"
-        android:layout_height="56dp"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:gravity="center"
