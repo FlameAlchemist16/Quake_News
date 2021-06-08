@@ -1,12 +1,11 @@
 package com.example.android.quakenews.earthquake;
 
 public class Quake {
-    private String mMagnitude, mDate, mPlace;
-
-    public Quake(String magnitude, String place, String date)
+    private String mPlace, mMagnitude, mDate;;
+    public Quake(double magnitude, String place, long date)
     {
-        mMagnitude = magnitude;
-        mDate = date;
+        mMagnitude = Double.toString(magnitude);
+        mDate = Long.toString(date);
         mPlace = place;
     }
     public String getMag()
