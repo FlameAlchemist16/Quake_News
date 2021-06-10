@@ -11,7 +11,9 @@ import com.example.android.quakenews.news.NewsAdapter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -456,8 +458,14 @@ public class MainActivity extends AppCompatActivity {
                 Double mag = prop.getDouble("mag");
                 String place = prop.getString("place");
                 Long date = prop.getLong("time");
+                /* Since time is in unix format we need to convert it into normal notation
+                * next 3 lines are used for this purpose
+                * Here we are using SimpleDateFormat a class that does the job*/
+                Date date1 = new Date(date);
+                SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm\nDD/MM/YYYY");
+                String actualDate = dateFormat.format(date1);
 
-                EQuakes.add(new Quake(mag,place,date));
+                EQuakes.add(new Quake(mag,place,actualDate));
 
             }
 
