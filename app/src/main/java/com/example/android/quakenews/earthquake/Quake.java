@@ -1,12 +1,20 @@
 package com.example.android.quakenews.earthquake;
 
 public class Quake {
-    private String mPlace, mMagnitude, mDate;;
+    private String mDir, mPlace, mMagnitude, mDate;
     public Quake(double magnitude, String place, String date)
     {
         mMagnitude = Double.toString(magnitude);
         mDate = date;
-        mPlace = place;
+        int loc = place.indexOf("of");
+        if(loc>=0&&loc<place.length()){
+            mDir = place.substring(0, loc+2);
+            mPlace = place.substring(loc+3);
+        }
+        else{
+            mDir = "";
+            mPlace = place;
+        }
     }
     public String getMag()
     {
@@ -16,7 +24,7 @@ public class Quake {
     {
         return mDate;
     }
-
+    public String getDir() { return mDir;}
     public String getPlace()
     {
         return mPlace;
