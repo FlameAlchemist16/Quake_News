@@ -34,6 +34,9 @@ public class NewsAdapter extends ArrayAdapter<Quake> {
         TextView mag = (TextView) recycleView.findViewById(R.id.mag);
         mag.setText(Quake.getMag());
 
+        TextView dir = (TextView) recycleView.findViewById(R.id.quake_at);
+        dir.setText(Quake.getDir());
+
         TextView place = (TextView) recycleView.findViewById(R.id.place);
         place.setText(Quake.getPlace());
 
