@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="72dp">
 
     <TextView
         android:id="@+id/mag"
@@ -13,18 +13,11 @@
         android:textColor="@color/black"
         tools:text="@string/sample_mag"/>
 
-    <View
-        android:layout_width="0.1dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@id/mag"
-        android:layout_toRightOf="@id/mag"
-        android:background="@color/black"/>
 
     <TextView
         android:id="@+id/quake_at"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
+        android:layout_height="36dp"
         android:layout_toStartOf="@id/day"
         android:layout_toLeftOf="@id/day"
         android:layout_toEndOf="@id/mag"
@@ -32,13 +25,13 @@
         android:gravity="bottom"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
-        android:text="@string/quake_at"
-        android:textSize="12sp" />
+        android:textSize="14sp"
+        tools:text="30Km N of"/>
 
     <TextView
         android:id="@+id/place"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_below="@id/quake_at"
         android:layout_toStartOf="@id/day"
         android:layout_toLeftOf="@id/day"
@@ -50,15 +43,8 @@
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
-        tools:text="Delaingiengeingeingeingiengeanignaengiaeng" />
+        tools:text="@string/sample_place" />
 
-    <View
-        android:layout_width="0.1dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@id/place"
-        android:layout_toRightOf="@id/place"
-        android:background="@color/black"/>
 
     <TextView
         android:id="@+id/day"
