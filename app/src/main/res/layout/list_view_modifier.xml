@@ -4,15 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="72dp">
+    <TextView
+        android:id="@+id/mag_color"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"/>
 
     <TextView
         android:id="@+id/mag"
         android:layout_width="56dp"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textColor="@color/black"
-        tools:text="@string/sample_mag"/>
-
+        android:textColor="@color/white"
+        tools:text="@string/sample_mag" />
 
     <TextView
         android:id="@+id/quake_at"
@@ -39,12 +45,11 @@
         android:layout_toRightOf="@id/mag"
         android:gravity="center_vertical"
         android:maxWidth="259dp"
-        android:textSize="16sp"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
+        android:textSize="16sp"
         tools:text="@string/sample_place" />
-
 
     <TextView
         android:id="@+id/day"
@@ -54,4 +59,5 @@
         android:layout_alignParentRight="true"
         android:gravity="center"
         tools:text="@string/sample_day"/>
+
 </RelativeLayout>
