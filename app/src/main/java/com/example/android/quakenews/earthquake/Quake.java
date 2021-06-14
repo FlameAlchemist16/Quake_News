@@ -2,8 +2,10 @@ package com.example.android.quakenews.earthquake;
 
 public class Quake {
     private String mDir, mPlace, mMagnitude, mDate;
+    private Integer mag;
     public Quake(double magnitude, String place, String date)
     {
+        mag = (int) Math.floor(magnitude);
         mMagnitude = Double.toString(magnitude);
         mDate = date;
         int loc = place.indexOf("of");
@@ -16,17 +18,9 @@ public class Quake {
             mPlace = place;
         }
     }
-    public String getMag()
-    {
-        return mMagnitude;
-    }
-    public String getDate()
-    {
-        return mDate;
-    }
+    public String getMag() { return mMagnitude; }
+    public String getDate() { return mDate; }
     public String getDir() { return mDir;}
-    public String getPlace()
-    {
-        return mPlace;
-    }
+    public String getPlace() { return mPlace; }
+    public Integer getColor() { return mag; }
 }
