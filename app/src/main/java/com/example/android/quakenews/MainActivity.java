@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             "        {\n" +
             "            \"type\":\"Feature\",\n" +
             "            \"properties\":{\n" +
-            "                \"mag\":6.6,\n" +
+            "                \"mag\":5.6,\n" +
             "                \"place\":\"215km SW of Tomatlan, Mexico\",\n" +
             "                \"time\":1453399617650,\n" +
             "                \"updated\":1478815764127,\n" +
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
             "        {\n" +
             "            \"type\":\"Feature\",\n" +
             "            \"properties\":{\n" +
-            "                \"mag\":6.7,\n" +
+            "                \"mag\":3.7,\n" +
             "                \"place\":\"52km SE of Shizunai, Japan\",\n" +
             "                \"time\":1452741933640,\n" +
             "                \"updated\":1594161934603,\n" +
