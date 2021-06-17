@@ -1,6 +1,10 @@
 package com.example.android.quakenews;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -458,6 +462,7 @@ public class MainActivity extends AppCompatActivity {
                 Double mag = prop.getDouble("mag");
                 String place = prop.getString("place");
                 Long date = prop.getLong("time");
+                String url = prop.getString("detail");
                 /* Since time is in unix format we need to convert it into normal notation
                 * next 3 lines are used for this purpose
                 * Here we are using SimpleDateFormat a class that does the job*/
@@ -465,7 +470,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm\nDD/MM/YYYY");
                 String actualDate = dateFormat.format(date1);
 
-                EQuakes.add(new Quake(mag,place,actualDate));
+                EQuakes.add(new Quake(mag,place,actualDate,url));
 
             }
 
@@ -476,7 +481,23 @@ public class MainActivity extends AppCompatActivity {
         NewsAdapter newsAdapter = new NewsAdapter(MainActivity.this,EQuakes);
         ListView quakeList = (ListView) findViewById(R.id.list_of_quakes);
         quakeList.setAdapter(newsAdapter);
+
+        quakeList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Quake quake = newsAdapter.getItem(position);
+
+                Uri quakeUrl = Uri.parse(quake.getUrl());
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, quakeUrl);
+
+                startActivity(intent);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
-
-
 }
